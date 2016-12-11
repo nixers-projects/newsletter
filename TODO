@@ -1,0 +1,2 @@
+* Cronjob to delete unconfirmed emails: delete_old.php
+* Script to send the newsletter: send_newsletter.php <mail>
