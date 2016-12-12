@@ -117,7 +117,7 @@ function send_email($email, $content, $subject, $append_unsubscribe=false, $psql
 
 	$content = wordwrap($content, 79, "\r\n");
 	$headers = "From: newsletter@nixers.net";
-	//print $email.":".$content;
+	print $email.":".$content;
 	mail($email, $subject, $content, $headers);
 
 	/*
@@ -166,3 +166,25 @@ function endsWith($haystack, $needle) {
 	return $needle === "" || (($temp = strlen($haystack) - strlen($needle)) >= 0 && strpos($haystack, $needle, $temp) !== FALSE);
 }
 
+function aggregate_newsletters($newslettersDir, $extension = "html"){
+	if ((file_exists($newslettersDir) && is_dir($newslettersDir)) === false)
+		return false;
+
+	$files = array(); //the return array
+
+	$dircontent = scandir($newslettersDir);
+	foreach ($dircontent as $item){
+		if ( (is_dir($item) === false) && (pathinfo($item, PATHINFO_EXTENSION) == $extension) ){ 
+			$file = array();
+			$basename = basename($item, '.'.$extension);
+			$file['title'] = explode('_',$basename)[0];
+
+			$date = date_create(explode('_',$basename)[1]);
+			$file['date'] = date_format($date, 'Y-m-d H:i:s');
+			$file['content'] = file_get_contents(rtrim($newslettersDir,'/').'/'.$item);
+			$files[] = $file;
+		}
+	}
+
+	return $files;
+}
