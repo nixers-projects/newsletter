@@ -11,6 +11,7 @@ include_once("config.php");
 	<link type="text/css" rel="stylesheet" href="https://nixers.net/cache/themes/theme10/jmbi.css" />
 	<link type="text/css" rel="stylesheet" href="https://nixers.net/css.php?stylesheet=35" />
 	<link rel="shortcut icon" href="https://i.imgur.com/yzxJYgq.png" />
+	<link rel="alternate" type="application/rss+xml" title="Newsletter Feed (RSS)" href="<?=rtrim(URL,'/').'/'.trim(NEWSLETTER_RSS_PLACE,'/');?>" />
 
 <style>
 #navlinks li {

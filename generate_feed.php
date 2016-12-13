@@ -1,22 +1,7 @@
 <?php
 
 include_once('functions.php');
-define('NEWSLETTER_TITLE','Nixers Newsletter');
-define('NEWSLETTER_LINK','http://nixers.net/');
-define('NEWSLETTER_DESCRIPTION','Yet another newsletter');
-
-define('NEWSLETTER_HEADER','<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0"
-xmlns:content="http://purl.org/rss/1.0/modules/content/">
-<channel>
-<title>'.NEWSLETTER_TITLE.'</title>
-<link>'.NEWSLETTER_LINK.'</link>
-<description>'.NEWSLETTER_DESCRIPTION.'</description>');
-
-define('NEWSLETTER_FOOTER','</channel></rss>');
-define('NEWSLETTER_RSS_PATH','feed.xml');
-
-$files = aggregate_newsletters('./newsletters/','html');
+$files = aggregate_newsletters();
 $body = "";
 
 foreach ($files as $file){
