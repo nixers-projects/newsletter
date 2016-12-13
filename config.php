@@ -18,8 +18,8 @@ define('URL', 'https://nixers.net/newsletter/');
 define('TIMEOUT_DELETION',' 2 days ');
 
 define('NEWSLETTER_TITLE','Nixers Newsletter');
-define('NEWSLETTER_LINK','http://nixers.net/');
-define('NEWSLETTER_DESCRIPTION','Yet another newsletter');
+define('NEWSLETTER_LINK','https://nixers.net/');
+define('NEWSLETTER_DESCRIPTION','The Nixers.net Newsletter');
 
 //Feed Structure
 define('NEWSLETTER_HEADER','<?xml version="1.0" encoding="UTF-8" ?>
