@@ -17,3 +17,22 @@ $mail_config = array(
 define('URL', 'https://nixers.net/newsletter/');
 define('TIMEOUT_DELETION',' 2 days ');
 
+define('NEWSLETTER_TITLE','Nixers Newsletter');
+define('NEWSLETTER_LINK','http://nixers.net/');
+define('NEWSLETTER_DESCRIPTION','Yet another newsletter');
+
+//Feed Structure
+define('NEWSLETTER_HEADER','<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+<title>'.NEWSLETTER_TITLE.'</title>
+<link>'.NEWSLETTER_LINK.'</link>
+<description>'.NEWSLETTER_DESCRIPTION.'</description>');
+define('NEWSLETTER_FOOTER','</channel></rss>');
+//End Feed Structure
+
+define('NEWSLETTER_RSS_PATH','feed.xml'); //the local place of the feed
+define('NEWSLETTER_DIR','./newsletters');
+define('NEWSLETTER_FILE_EXTENSION','html');
+define('NEWSLETTER_RSS_PLACE','feed.xml'); //the url of the feed URL.NEWSLETTER_RSS_PLACE
