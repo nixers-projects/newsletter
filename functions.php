@@ -115,7 +115,7 @@ function send_email($email, $content, $subject, $append_unsubscribe=false, $psql
 		$content .= "\r\n\r\nunsucscribe:\r\n".URL.'unsusbscribe.php?email='.$email.'&token='.$token."\r\n";
 	}
 
-	$content = wordwrap($content, 79, "\r\n");
+	//$content = wordwrap($content, 79, "\r\n");
 	$headers = "From: newsletter@nixers.net";
 	//print $email.":".$content;
 	mail($email, $subject, $content, $headers);
