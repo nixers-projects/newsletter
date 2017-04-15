@@ -2,7 +2,7 @@
 
 include_once('functions.php');
 if (count($argv) >= 2) {
-	$files = aggregate_newsletters();
+	$files = array_reverse(aggregate_newsletters());
 	$body = "";
 
 	foreach ($files as $file){
