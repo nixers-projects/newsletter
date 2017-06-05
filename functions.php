@@ -197,7 +197,7 @@ function aggregate_newsletters($newslettersDir = NEWSLETTER_DIR, $extension = NE
 			$file['title'] = explode('_',$basename)[0];
 			$date = date_create(explode('_',$basename)[1]);
 			$file['date'] = date_format($date, 'Y-m-d H:i:s');
-			$file['content'] = str_replace("\n", "\n<br/>", htmlspecialchars(file_get_contents(rtrim($newslettersDir,'/').'/'.$item)));
+			$file['content'] = MarkdownExtra::defaultTransform(file_get_contents(rtrim($newslettersDir,'/').'/'.$item))."\r\n";
 			$files[] = $file;
 		}
 	}
