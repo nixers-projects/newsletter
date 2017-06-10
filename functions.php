@@ -115,7 +115,7 @@ function send_email($email, $content_plain, $subject, $append_unsubscribe=false,
 			return -1;
 		}
 		$token = $result[0]['token'];
-		$content_plain .= "\r\n\r\nunsucscribe:\r\n<".URL.'unsusbscribe.php?email='.$email.'&token='.$token.">\r\n";
+		$content_plain .= "\r\n\r\nunsubscribe:\r\n<".URL.'unsusbscribe.php?email='.$email.'&token='.$token.">\r\n";
 	}
 	
 	$content_html = MarkdownExtra::defaultTransform($content_plain)."\r\n";
