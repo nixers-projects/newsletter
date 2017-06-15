@@ -4,7 +4,7 @@ jsdom = require('node-jsdom').jsdom;
 fs = require('fs');
 
 var args = process.argv.slice(2);
-var uri = args[0] || "https://nixers.net/newsletter/feed.xml"
+var uri = args[0] || "https://nixers.net/newsletter/feed.xml";
 var src = '';
 
 req.get(uri, function(err, res, body){
