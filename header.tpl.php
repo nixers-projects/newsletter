@@ -7,9 +7,10 @@ include_once("config.php");
 <head>
 	<meta charset='utf-8' />
 	<title>Newsletter Subscription</title>
-	<link type="text/css" rel="stylesheet" href="https://nixers.net/css.php?stylesheet=40" />
-	<link type="text/css" rel="stylesheet" href="https://nixers.net/cache/themes/theme10/jmbi.css" />
-	<link type="text/css" rel="stylesheet" href="https://nixers.net/css.php?stylesheet=35" />
+
+	<link type="text/css" rel="stylesheet" href="https://nixers.net/css.php?stylesheet=44" />
+	<link type="text/css" rel="stylesheet" href="https://nixers.net/cache/themes/theme1/thread_status.css" />
+	<link type="text/css" rel="stylesheet" href="https://nixers.net/cache/themes/theme13/css3.css" />
 	<link rel="shortcut icon" href="https://i.imgur.com/yzxJYgq.png" />
 	<link rel="alternate" type="application/rss+xml" title="Newsletter Feed (RSS)" href="<?=rtrim(URL,'/').'/'.trim(NEWSLETTER_RSS_PLACE,'/');?>" />
 
@@ -51,13 +52,21 @@ _|  _|_| _/\_\\___|_|  ____/_)_|  _|\___|\__|
 			<div id="nixerlogo">
 				<a href="<?=URL?>">nixers</a><span style="color:#638B87; font-size: 13px;">' newsletter</span>
 			</div>
+			<hr/>
 			<div id="navlinks">
+				<span class="inline_block"> 
 					<a href="https://nixers.net">Forums</a>
-					<span>&nbsp;|&nbsp;</span>
+				</span>
+				<span>&nbsp;|&nbsp;</span>
+				<span class="inline_block"> 
 					<a href="https://podcast.nixers.net/what">Podcast</a>
-					<span>&nbsp;|&nbsp;</span>
+				</span>
+				<span>&nbsp;|&nbsp;</span>
+				<span class="inline_block"> 
 					<a href="https://nixers.net/showthread.php?tid=1939">Other Activities</a>
+				</span>
 			</div>
+			<hr/>
 		</div>
 	</div>
 </div>
