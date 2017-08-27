@@ -55,6 +55,14 @@ _|  _|_| _/\_\\___|_|  ____/_)_|  _|\___|\__|
 			<hr/>
 			<div id="navlinks">
 				<span class="inline_block"> 
+					<a href="./feed.xml">RSS</a>
+				</span>
+				<span>&nbsp;|&nbsp;</span>
+				<span class="inline_block"> 
+					<a href="./entries.php">Browsable Entries</a>
+				</span>
+				<span>&nbsp;|&nbsp;</span>
+				<span class="inline_block"> 
 					<a href="https://nixers.net">Forums</a>
 				</span>
 				<span>&nbsp;|&nbsp;</span>
