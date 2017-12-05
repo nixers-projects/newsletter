@@ -7,6 +7,8 @@ include_once("config.php");
 <head>
 	<meta charset='utf-8' />
 	<title>Newsletter Subscription</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link type="text/css" rel="stylesheet" href="https://nixers.net/css.php?stylesheet=44" />
 	<link type="text/css" rel="stylesheet" href="https://nixers.net/cache/themes/theme1/thread_status.css" />
@@ -32,6 +34,14 @@ include_once("config.php");
 p {
 	margin-top: 1ex;
 	margin-bottom: 1ex;
+}
+.feed_content {
+	word-wrap: break-word;
+}
+code {
+    overflow: scroll;
+    max-width: 100%;
+    display: block;
 }
 </style>
 
