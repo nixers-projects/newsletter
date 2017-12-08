@@ -14,11 +14,11 @@ $mail_config = array(
 	'password' => '',
 );
 
-define('URL', 'https://nixers.net/newsletter/');
+define('URL', 'https://newsletter.nixers.net/');
 define('TIMEOUT_DELETION',' 2 days ');
 
 define('NEWSLETTER_TITLE','Nixers Newsletter');
-define('NEWSLETTER_LINK','https://nixers.net/');
+define('NEWSLETTER_LINK','https://newsletter.nixers.net/');
 define('NEWSLETTER_DESCRIPTION','The Nixers.net Newsletter');
 
 //Feed Structure
