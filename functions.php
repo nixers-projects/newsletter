@@ -125,8 +125,8 @@ function send_email($email, $content_plain, $subject, $append_unsubscribe=false,
 	$headers = "From: newsletter@nixers.net\r\n";
 	$headers .= 'MIME-Version: 1.0'."\r\n";
 	$headers .= "Content-type: multipart/alternative;\n    boundary=$boundary\r\n\r\n";
-	$content_delimiter_plain = "\r\n\r\n--$boundary\r\nContent-type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding         ↪ : quoted-printable\r\n\r\n";
-	$content_delimiter_html = "\r\n\r\n--$boundary\r\nContent-type: text/html; charset=\"utf-8\"\r\nContent-Transfer-Encoding:          ↪ quoted-printable\r\n\r\n";
+	$content_delimiter_plain = "\r\n\r\n--$boundary\r\nContent-type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: quoted-printable\r\n\r\n";
+	$content_delimiter_html = "\r\n\r\n--$boundary\r\nContent-type: text/html; charset=\"utf-8\"\r\nContent-Transfer-Encoding: quoted-printable\r\n\r\n";
 	$content_delimiter_end = "\r\n\r\n--$boundary--\r\n";
 	$content = $content_delimiter_plain . $content_plain . $content_delimiter_html . $content_html. $content_delimiter_end;
 	//print $email."\r\n";
