@@ -119,6 +119,7 @@ function send_email($email, $content_plain, $subject, $append_unsubscribe=false,
 	}
 	
 	$content_html = MarkdownExtra::defaultTransform($content_plain)."\r\n";
+	$content_html = quoted_printable_encode($content_html);
 
 	//$content = wordwrap($content, 79, "\r\n");
 	$boundary= md5(uniqid(rand()));
