@@ -51,7 +51,7 @@ function add_to_maillist($email, $psql) {
 You're receiving this email because you've subscribed to the Nixers Newsletter.
 
 To confirm your subscription please follow this link:
-<".URL."confirm.php?email=".$email.'&token='.get_associated_token($email,$psql).">\r\n\r\n",
+<".URL."confirm.php?email=".urlencode($email).'&token='.get_associated_token($email,$psql).">\r\n\r\n",
 	"Nixers Newsletter Confirm Subscription",
 	false,
 	$psql
@@ -115,7 +115,7 @@ function send_email($email, $content_plain, $subject, $append_unsubscribe=false,
 			return -1;
 		}
 		$token = $result[0]['token'];
-		$content_plain .= "\r\n\r\nunsubscribe:\r\n<".URL.'unsusbscribe.php?email='.$email.'&token='.$token.">\r\n";
+		$content_plain .= "\r\n\r\nunsubscribe:\r\n<".URL.'unsusbscribe.php?email='.urlencode($email).'&token='.$token.">\r\n";
 	}
 	
 	$content_html = MarkdownExtra::defaultTransform($content_plain)."\r\n";
@@ -125,7 +125,7 @@ function send_email($email, $content_plain, $subject, $append_unsubscribe=false,
 	$boundary= md5(uniqid(rand()));
 	$headers = "From: newsletter@nixers.net\r\n";
 	$headers .= 'MIME-Version: 1.0'."\r\n";
-	$headers .= 'List-Unsubscribe: <'.URL.'unsubscribe.php?email='.$email.'&token'.$token.">\r\n";
+	$headers .= 'List-Unsubscribe: <'.URL.'unsubscribe.php?email='.urlencode($email).'&token'.$token.">\r\n";
 	$headers .= "Content-type: multipart/alternative;\n    boundary=$boundary\r\n\r\n";
 	$content_delimiter_plain = "\r\n\r\n--$boundary\r\nContent-type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: quoted-printable\r\n\r\n";
 	$content_delimiter_html = "\r\n\r\n--$boundary\r\nContent-type: text/html; charset=\"utf-8\"\r\nContent-Transfer-Encoding: quoted-printable\r\n\r\n";
